@@ -1,6 +1,6 @@
 #服务器配置
 server:
-  port: 80
+  port: 8001
   undertow:
     # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
     io-threads: 16
@@ -65,10 +65,10 @@ mybatis-plus:
 
 #swagger配置信息
 swagger:
-  title: SpringBlade 接口文档系统
-  description: SpringBlade 接口文档系统
+  title: Alpaca 接口文档系统
+  description: Alpaca 接口文档系统
   version: 2.7.3
-  license: Powered By SpringBlade
+  license: Powered By Alpaca
   licenseUrl: https://bladex.vip
   terms-of-service-url: https://bladex.vip
   contact:

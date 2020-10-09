@@ -66,7 +66,15 @@ public class MenuWrapper extends BaseEntityWrapper<Menu, MenuVO> {
 
 
 	public List<MenuVO> listNodeVO(List<Menu> list) {
-		List<MenuVO> collect = list.stream().map(menu -> BeanUtil.copy(menu, MenuVO.class)).collect(Collectors.toList());
+		List<MenuVO> collect = list.stream().map(menu -> {
+				MenuVO vo = BeanUtil.copy(menu, MenuVO.class);
+				vo.setText(vo.getName());
+				vo.setLink(vo.getPath());
+				vo.setIcon(vo.getSource());
+				vo.setKey(Func.toStr(vo.getId()));
+				return vo;
+			}
+		).collect(Collectors.toList());
 		return ForestNodeMerger.merge(collect);
 	}
 

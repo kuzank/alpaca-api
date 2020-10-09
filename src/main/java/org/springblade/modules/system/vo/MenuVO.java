@@ -83,4 +83,16 @@ public class MenuVO extends Menu implements INode {
 	 * 是否新窗口打开
 	 */
 	private String isOpenName;
+
+	/**
+	 * Enable ng-alain menu
+	 * https://ng-alain.com/theme/menu/zh#Menu
+	 */
+	private String text;
+
+	private String link;
+
+	private String icon;
+
+	private String key;
 }

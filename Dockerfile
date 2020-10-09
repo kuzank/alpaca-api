@@ -8,7 +8,7 @@ WORKDIR /blade
 
 EXPOSE 8800
 
-ADD ./target/SpringBlade.jar ./app.jar
+ADD ./target/Alpaca.jar ./app.jar
 
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
 
